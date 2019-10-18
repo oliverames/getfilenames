@@ -1,0 +1,24 @@
+def filename_list():
+    ''' takes some path such as:
+
+        /Users/oliverames/Desktop/Test Images
+
+        and prints a list of filenames without their
+        extensions
+        
+    '''
+    
+    file_path = input("Enter file path: ")
+    print()
+    
+    import os
+    mylist = os.listdir(file_path)
+
+    for elem in mylist:
+        #if elem[:8] == 'favorite':
+        
+        print(elem[:-4])
+
+    print()
+
+#[e.split('.')[0] for e in lst]
